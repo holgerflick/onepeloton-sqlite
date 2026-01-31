@@ -59,9 +59,9 @@ var
   I: Integer;
   QueryInfo: TQueryInfo;
 begin
-  WriteLn('═══════════════════════════════════════════════════════════');
+  WriteLn('===========================================================');
   WriteLn('        PELOTON WORKOUT STATISTICS ANALYZER');
-  WriteLn('═══════════════════════════════════════════════════════════');
+  WriteLn('===========================================================');
   WriteLn;
   WriteLn('Available Queries:');
   WriteLn;
