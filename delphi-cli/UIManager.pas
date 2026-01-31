@@ -108,7 +108,7 @@ begin
     WriteLn;
     
     // Print separator
-    Separator := StringOfChar('─', (Query.FieldCount * 23) - 3);
+    Separator := StringOfChar('-', (Query.FieldCount * 23) - 3);
     WriteLn(Separator);
     
     // Print data rows
