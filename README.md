@@ -1,3 +1,5 @@
+**-- No affiliation with Peloton Interactive, Inc. --**
+
 # Peloton Workout Database Importer
 
 This tool imports Peloton workout CSV data into a normalized SQLite database for easy analysis and querying.
