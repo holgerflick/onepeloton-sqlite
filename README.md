@@ -12,6 +12,67 @@ This tool imports Peloton workout CSV data into a normalized SQLite database for
 - **Live vs On Demand tracking** - Records how you took each class
 - **Class repetition tracking** - Take the same class multiple times
 
+## Database Structure
+
+```mermaid
+erDiagram
+    workouts ||--o| classes : "references"
+    workouts ||--|| fitness_disciplines : "references"
+    classes ||--|| class_titles : "references"
+    classes ||--o| instructors : "references"
+    classes ||--|| fitness_disciplines : "references"
+    classes ||--o| workout_types : "references"
+
+    workouts {
+        INTEGER workout_id PK
+        INTEGER class_id FK "NULL for Just Ride"
+        INTEGER discipline_id FK
+        TEXT workout_timestamp "ISO 8601 UTC"
+        BOOLEAN is_live "Live/On Demand"
+        INTEGER length_minutes
+        INTEGER total_output
+        INTEGER avg_watts
+        REAL avg_resistance
+        INTEGER avg_cadence_rpm
+        REAL avg_speed_kph
+        REAL distance_km
+        INTEGER calories_burned
+        REAL avg_heartrate
+        REAL avg_incline
+        REAL avg_pace_min_km
+    }
+
+    classes {
+        INTEGER class_id PK
+        TEXT class_timestamp UK "ISO 8601 UTC"
+        INTEGER title_id FK
+        INTEGER instructor_id FK
+        INTEGER discipline_id FK
+        INTEGER type_id FK
+        INTEGER length_minutes
+    }
+
+    instructors {
+        INTEGER instructor_id PK
+        TEXT name UK
+    }
+
+    fitness_disciplines {
+        INTEGER discipline_id PK
+        TEXT name UK
+    }
+
+    workout_types {
+        INTEGER type_id PK
+        TEXT name UK
+    }
+
+    class_titles {
+        INTEGER title_id PK
+        TEXT title UK
+    }
+```
+
 ## Usage
 
 ```bash
