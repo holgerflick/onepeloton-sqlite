@@ -1,4 +1,13 @@
-**-- No affiliation with Peloton Interactive, Inc. --**
+**Disclaimer:**
+
+This project is provided **as is**, with no warranty or guarantee of any kind. Use at your own risk.
+
+- **No affiliation:** This tool is not affiliated with, endorsed by, or connected to Peloton Interactive, Inc. or any of its services.
+- **No interaction with Peloton:** The tool does **not** connect to, interact with, or download data from any Peloton servers or services.
+- **User-supplied data only:** All data must be imported from a workout CSV file that **you** download yourself from your own Peloton account. This tool does not facilitate or automate any data download from Peloton.
+- **No monetization:** This project is open source and provided free of charge. I do not make any money from it.
+
+---
 
 # Peloton Workout Database Importer
 
